@@ -8,9 +8,9 @@ const About = () => {
         <div className="text-center mb-16 flex flex-col items-center justify-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-black mb-6 flex items-center justify-center gap-4">
             <span>Sobre <span className="text-brand-red">MeMimo</span></span>
-            <img src="/imagenes/mimo.png" alt="Mascota MeMimo" className="hidden md:inline-block w-20 h-20 object-contain drop-shadow-xl" />
+            <img src="imagenes/mimo.webp" alt="Mascota MeMimo" className="hidden md:inline-block w-20 h-20 object-contain drop-shadow-xl" />
           </h2>
-          <img src="/imagenes/mimo.png" alt="Mascota MeMimo" className="mx-auto mb-4 w-20 h-20 object-contain drop-shadow-xl md:hidden" />
+          <img src="imagenes/mimo.webp" alt="Mascota MeMimo" className="mx-auto mb-4 w-20 h-20 object-contain drop-shadow-xl md:hidden" />
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             {companyInfo.description}
           </p>

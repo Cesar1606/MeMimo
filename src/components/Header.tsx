@@ -17,7 +17,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <img src="/imagenes/logo.png" alt="MeMimo Logo" className="h-10 w-auto" />
+            <img src="imagenes/logo.png" alt="MeMimo Logo" className="h-10 w-auto" />
             <span className="ml-1 text-lg font-semibold text-brand-black hidden sm:block">
               Helados Artesanales
             </span>
