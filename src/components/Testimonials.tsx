@@ -1,9 +1,22 @@
 import React from 'react';
 import { testimonials } from '../data/company';
+import { motion, easeInOut } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeInOut } },
+};
 
 const Testimonials = () => {
   return (
-    <section id="testimonios" className="py-20 bg-gradient-to-b from-white via-gray-50 to-gray-100">
+    <motion.section
+      id="testimonios"
+      className="py-20 bg-gradient-to-b from-white via-gray-50 to-gray-100"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -57,7 +70,7 @@ const Testimonials = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -2,10 +2,23 @@ import React from 'react';
 import { companyInfo } from '../data/company';
 // @ts-ignore
 import logo from '../../imagenes/logo.png';
+import { motion, easeInOut } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeInOut } },
+};
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-gray-50 to-gray-100 overflow-hidden">
+    <motion.section
+      id="inicio"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-gray-50 to-gray-100 overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-fade-in-up">
         <div className="max-w-4xl mx-auto">
           {/* Logo grande */}
@@ -78,7 +91,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

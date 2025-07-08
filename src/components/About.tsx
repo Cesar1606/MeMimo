@@ -2,10 +2,23 @@ import React from 'react';
 import { companyInfo } from '../data/company';
 // @ts-ignore
 import mimo from '../../imagenes/mimo.png';
+import { motion, easeInOut } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeInOut } },
+};
 
 const About = () => {
   return (
-    <section id="sobre-nosotros" className="py-20 bg-gradient-to-b from-white via-gray-50 to-gray-100 relative overflow-hidden">
+    <motion.section
+      id="sobre-nosotros"
+      className="py-20 bg-gradient-to-b from-white via-gray-50 to-gray-100 relative overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 flex flex-col items-center justify-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-black mb-6 flex items-center justify-center gap-4">
@@ -117,7 +130,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
