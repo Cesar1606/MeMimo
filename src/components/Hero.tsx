@@ -1,5 +1,7 @@
 import React from 'react';
 import { companyInfo } from '../data/company';
+// @ts-ignore
+import logo from '../../imagenes/logo.png';
 
 const Hero = () => {
   return (
@@ -7,7 +9,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-fade-in-up">
         <div className="max-w-4xl mx-auto">
           {/* Logo grande */}
-          <img src="imagenes/logo.png" alt="MeMimo Logo" className="mx-auto mb-6 w-32 md:w-44 drop-shadow-xl" />
+          <img src={logo} alt="MeMimo Logo" className="mx-auto mb-6 w-32 md:w-44 drop-shadow-xl" />
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl font-bold text-brand-black mb-6">
             Los Mejores
