@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { rolls, heladosGourmet, malteadas, crepes, bebidas, toppings } from '../data/products';
-import { motion, EASES } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -78,7 +78,7 @@ function RollsSection() {
         <motion.div
           key={item.nombre}
           variants={fadeInUp}
-          className="bg-white border-4 border-brand-red rounded-2xl shadow-xl p-8 flex flex-col gap-2 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          className="bg-white border-4 border-brand-red rounded-2xl shadow-xl p-8 flex flex-col gap-2 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl"
         >
           <h3 className="text-2xl font-extrabold text-brand-red mb-1 uppercase tracking-wide">{item.nombre}</h3>
           <div className="text-3xl font-black text-brand-black mb-1">S/. {item.precio}</div>
@@ -238,7 +238,7 @@ function ToppingsTab() {
         <motion.div
           key={topping.nombre + topping.precio}
           variants={fadeInUp}
-          className="bg-white border-4 border-brand-red rounded-2xl shadow-xl p-8 flex flex-col items-center gap-2 transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          className="bg-white border-4 border-brand-red rounded-2xl shadow-xl p-8 flex flex-col items-center gap-2 transition-transform duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl"
         >
           <span className="text-xl font-extrabold text-brand-black mb-1">{topping.nombre}</span>
           <span className="text-2xl font-black text-brand-red">S/ {topping.precio.toFixed(2)}</span>
